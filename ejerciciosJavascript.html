@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas JavaScript</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <h1>Tareas de JavaScript</h1>
+
+    <!-- Tarea 1 -->
+    <div>
+        <h2>Tarea 1</h2>
+        <p>Crea una página que muestre el mensaje “¡Soy JavaScript!”.</p>
+        <button onclick="ejercicio1()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 2 -->
+    <div>
+        <h2>Tarea 2</h2>
+        <p>Toma la solución de la tarea anterior. Modificarla extrayendo el contenido del script a un archivo externo <code>alert.js</code>, ubicado en la misma carpeta.</p>
+        <button onclick="ejercicio2()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 3 -->
+    <div>
+        <h2>Tarea 3</h2>
+        <p>Trabajando con variables:</p>
+        <ol>
+            <li>Declara dos variables: <code>admin</code> y <code>name</code>.</li>
+            <li>Asigna el valor "John" a <code>name</code>.</li>
+            <li>Copia el valor de <code>name</code> a <code>admin</code>.</li>
+            <li>Muestra el valor de <code>admin</code> usando <code>alert</code> (debe salir “John”).</li>
+        </ol>
+        <button onclick="ejercicio3()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 4 -->
+    <div>
+        <h2>Tarea 4</h2>
+        <p>1. Crea una variable con el nombre de nuestro planeta. ¿Cómo nombrarías a dicha variable?</p>
+        <p>2. Crea una variable para almacenar el nombre del usuario actual de un sitio web. ¿Cómo nombrarías a dicha variable?</p>
+        <button onclick="ejercicio4()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 5 -->
+    <div>
+        <h2>Tarea 5</h2>
+        <p>Cuál es la salida del script? Ejecuta dicho script y muestra su salida de consola.</p>
+        <pre>
+let name = "Ilya";
+alert( `Hola ${1}` ); // ?
+alert( `Hola ${"name"}` ); // ?
+alert( `Hola ${name}` ); // ?
+        </pre>
+        <p>Nota: Atención a los <code>``</code> (backticks).</p>
+        <button onclick="ejercicio5()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 6 -->
+    <div>
+        <h2>Tarea 6</h2>
+        <p>Crea una página web que pida un nombre y lo muestre.</p>
+        <button onclick="ejercicio6()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 7 -->
+    <div>
+        <h2>Tarea 7</h2>
+        <p>¿Cuáles son los valores finales de todas las variables <code>a</code>, <code>b</code>, <code>c</code> y <code>d</code> después del código a continuación? Ejecuta el código y muestra su resultado.</p>
+        <pre>
+let a = 1, b = 1;
+let c = ++a; // ?
+let d = b++; // ?
+        </pre>
+        <button onclick="ejercicio7()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 8 -->
+    <div>
+        <h2>Tarea 8</h2>
+        <p>¿Cuáles son los valores de ‘a’ y ‘x’ después del código a continuación?</p>
+        <pre>
+let a = 2;
+let x = 1 + (a *= 2);
+        </pre>
+        <button onclick="ejercicio8()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 9 -->
+    <div>
+        <h2>Tarea 9</h2>
+        <p>¿Cuáles son los resultados de estas expresiones?</p>
+        <pre>
+"" + 1 + 0
+"" - 1 + 0
+true + false
+6 / "3"
+"2" * "3"
+4 + 5 + "px"
+"$" + 4 + 5
+"4" - 2
+"4px" - 2
+"-9" + 5
+"-9" - 5
+null + 1
+undefined + 1
+" \t \n" - 2
+        </pre>
+        <button onclick="ejercicio9()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 10 -->
+    <div>
+        <h2>Tarea 10</h2>
+        <p>Aquí hay un código que le pide al usuario dos números y muestra su suma.</p>
+        <pre>
+let a = prompt("Primer número?", 1);
+let b = prompt("Segundo número?", 2);
+alert(a + b); // 12
+        </pre>
+        <p>Funciona incorrectamente. ¿Por qué? Arreglalo. El resultado debería ser 3.</p>
+        <button onclick="ejercicio10()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 11 -->
+    <div>
+        <h2>Tarea 11</h2>
+        <p>¿Cuál será el resultado de las siguientes expresiones?</p>
+        <pre>
+5 > 4
+"apple" > "pineapple"
+"2" > "12"
+undefined == null
+undefined === null
+null == "\n0\n"
+null === +"\n0\n"
+        </pre>
+        <button onclick="ejercicio11()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 12 -->
+    <div>
+        <h2>Tarea 12</h2>
+        <p>¿Se mostrará el <code>alert</code>?</p>
+        <pre>
+if ("0") {
+  alert( 'Hello' );
+}
+        </pre>
+        <button onclick="ejercicio12()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 13 -->
+    <div>
+        <h2>Tarea 13</h2>
+        <p>Usando el constructor <code>if..else</code>, escribe el código que pregunta: ‘¿Cuál es el nombre “oficial” de JavaScript?’</p>
+        <p>Si el visitante escribe “ECMAScript”, entonces muestra: “¡Correcto!”, de lo contrario muestra: “¿No lo sabes? ¡ECMAScript!”.</p>
+        <button onclick="ejercicio13()">Mostrar Solución</button>
+    </div>
+    <!-- Tarea 14 -->
+    <div>
+        <h2>Tarea 14 (muestra el signo)</h2>
+        <p>
+            Usando el constructor <code>if..else</code>, escribe un código que obtenga a través de un 
+            prompt un número y entonces muestre en un alert:
+        </p>
+        <ul>
+            <li>1, si el valor es mayor que cero,</li>
+            <li>-1, si es menor que cero,</li>
+            <li>0, si es igual a cero.</li>
+        </ul>
+        <p>En la tarea asumimos que siempre el usuario introduce un número.</p>
+        <button onclick="ejercicio14()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 15 -->
+    <div>
+        <h2>Tarea 15 (Reescribe el 'if' como '?')</h2>
+        <p>Reescribe esta condición <code>if</code> usando el operador ternario <code>?</code>:</p>
+        <pre>
+    let result;
+    if (a + b < 4) {
+        result = 'Debajo';
+    } else {
+        result = 'Encima';
+    }
+        </pre>
+        <button onclick="ejercicio15()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 16 -->
+    <div>
+        <h2>Tarea 16 (Reescribe el 'if..else' con '?')</h2>
+        <p>
+            Reescribe el <code>if..else</code> utilizando operadores ternarios múltiples <code>?</code>.
+            Para legibilidad, es recomendado dividirlo en múltiples líneas de código.
+        </p>
+        <pre>
+    let message;
+    if (login == 'Empleado') {
+        message = 'Hola';
+    } else if (login == 'Director') {
+        message = 'Felicidades';
+    } else if (login == '') {
+        message = 'Sin sesión';
+    } else {
+        message = '';
+    }
+        </pre>
+        <button onclick="ejercicio16()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 17 -->
+    <div>
+        <h2>Tarea 17 (pregunta acerca de 'if')</h2>
+        <p>¿Cuáles de estos alerts van a ejecutarse? ¿Cuáles serán los resultados?</p>
+        <pre>
+    if (-1 || 0) alert("primero");
+    if (-1 && 0) alert("segundo");
+    if (null || -1 && 1) alert("tercero");
+        </pre>
+        <button onclick="ejercicio17()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 18 -->
+    <div>
+        <h2>Tarea 18 (comprueba inicio de sesión)</h2>
+        <p>
+            Escribe un código que pregunte por el inicio de sesión con <code>prompt</code>. 
+            Si el visitante ingresa "Admin", entonces <code>prompt</code> por una contraseña.
+            Si la entrada es una línea vacía o <code>Esc</code>, muestra "Cancelado.". Si es otra 
+            cadena de texto, muestra "No te conozco".
+        </p>
+        <p>La contraseña se comprueba de la siguiente manera:</p>
+        <ul>
+            <li>Si es igual a "TheMaster", entonces muestra "Bienvenido!".</li>
+            <li>Si es otra cadena de texto, muestra "Contraseña incorrecta".</li>
+            <li>Para una cadena de texto vacía o una entrada cancelada, muestra "Cancelado".</li>
+        </ul>
+        <button onclick="ejercicio18()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 19 -->
+    <div>
+        <h2>Tarea 19 (último valor del bucle)</h2>
+        <p>¿Cuál es el último valor mostrado en un alert por este código? ¿Por qué?</p>
+        <pre>
+    let i = 3;
+    while (i) {
+        alert(i--);
+    }
+        </pre>
+        <button onclick="ejercicio19()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 20 -->
+    <div>
+        <h2>Tarea 20 (Bucle while)</h2>
+        <p>
+            Para cada iteración del bucle, escribe qué valor será impreso. Ambos bucles, ¿alertan 
+            los mismos valores? Atención al sufijo y prefijo.
+        </p>
+        <pre>
+    Forma de prefijo (++i):
+    let i = 0;
+    while (++i < 5) alert(i);
+
+    Forma de sufijo (i++):
+    let i = 0;
+    while (i++ < 5) alert(i);
+        </pre>
+        <button onclick="ejercicio20()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 21 -->
+    <div>
+        <h2>Tarea 21 (Bucle "for")</h2>
+        <p>
+            Para cada bucle, anota qué valores mostrará y luego compara las respuestas. Ambos bucles, 
+            ¿muestran en alert los mismos valores?
+        </p>
+        <pre>
+    1. Forma del sufijo:
+    for (let i = 0; i < 5; i++) alert(i);
+
+    2. Forma del prefijo:
+    for (let i = 0; i < 5; ++i) alert(i);
+        </pre>
+        <button onclick="ejercicio21()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 22 -->
+    <div>
+        <h2>Tarea 22 (Bucle "for")</h2>
+        <p>Usa el bucle for para mostrar números pares del 2 al 10.</p>
+        <button onclick="ejercicio22()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 23 -->
+    <div>
+        <h2>Tarea 23 (Reemplaza "for" por "while")</h2>
+        <p>
+            Reescribe el código cambiando el bucle for a while sin alterar su comportamiento 
+            (la salida debería ser la misma).
+        </p>
+        <pre>
+    for (let i = 0; i < 3; i++) {
+        alert(`número ${i}!`);
+    }
+        </pre>
+        <button onclick="ejercicio23()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 24 -->
+    <div>
+        <h2>Tarea 24 (Muestra números primos)</h2>
+        <p>
+            Escribe el código que muestre números primos en el intervalo de 2 a n. 
+            Para n = 10, el resultado será 2, 3, 5, 7.
+        </p>
+        <button onclick="ejercicio24()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 25 -->
+    <div>
+        <h2>Tarea 25 (Reescribe el "switch" en un "if")</h2>
+        <p>
+            Escribe el código utilizando if..else que corresponda al siguiente switch:
+        </p>
+        <pre>
+    switch (navegador) {
+        case 'Edge':
+            alert("¡Tienes Edge!");
+            break;
+        case 'Chrome':
+        case 'Firefox':
+        case 'Safari':
+        case 'Opera':
+            alert("Está bien, soportamos estos navegadores también");
+            break;
+        default:
+            alert("Esperamos que esta página se vea bien");
+    }
+        </pre>
+        <button onclick="ejercicio25()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 26 -->
+    <div>
+        <h2>Tarea 26 (Reescribe "if" en "switch")</h2>
+        <p>
+            Reescribe el código debajo utilizando solo un argumento switch:
+        </p>
+        <pre>
+    let a = +prompt('a?', '');
+
+    if (a == 0) {
+        alert(0);
+    }
+    if (a == 1) {
+        alert(1);
+    }
+    if (a == 2 || a == 3) {
+        alert('2,3');
+    }
+        </pre>
+        <button onclick="ejercicio26()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 27 -->
+    <div>
+        <h2>Tarea 27 (¿Es "else" requerido?)</h2>
+        <p>
+            ¿Funcionará la función de manera diferente si se borra else?
+        </p>
+        <pre>
+    function checkAge(age) {
+        if (age > 18) {
+            return true;
+        } else {
+            return confirm('¿Tus padres te permitieron?');
+        }
+    }
+        </pre>
+        <button onclick="ejercicio27()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 28 -->
+    <div>
+        <h2>Tarea 28 (Reescribe la función utilizando '?' o '||')</h2>
+        <p>
+            Reescribe la función checkAge para realizar lo mismo, pero en una sola línea. 
+            Haz dos variantes:
+        </p>
+        <ul>
+            <li>Usando un operador de signo de interrogación ?</li>
+            <li>Usando OR ||</li>
+        </ul>
+        <button onclick="ejercicio28()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 29 -->
+    <div>
+        <h2>Tarea 29 (Función min(a, b))</h2>
+        <p>
+            Escribe una función min(a, b) que devuelva el menor de dos números.
+        </p>
+        <button onclick="ejercicio29()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 30 -->
+    <div>
+        <h2>Tarea 30 (Función pow(x, n))</h2>
+        <p>
+            Escribe la función pow(x, n) que devuelva x como potencia de n. 
+            Crea una página web que solicite x y n, y luego muestre el resultado.
+        </p>
+        <button onclick="ejercicio30()">Mostrar Solución</button>
+    </div>
+
+    <!-- Tarea 31 -->
+    <div>
+        <h2>Tarea 31 (Reescribe con funciones flecha)</h2>
+        <p>
+            Reemplaza las expresiones de función con funciones flecha en el siguiente código:
+        </p>
+        <pre>
+    function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+    }
+
+    ask(
+        "Do you agree?",
+        function() { alert("You agreed."); },
+        function() { alert("You canceled the execution."); }
+    );
+        </pre>
+        <button onclick="ejercicio31()">Mostrar Solución</button>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
